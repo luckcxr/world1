@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.top{
+			width: 500px;
+			border: 1px solid #000;
+		}
+		img{
+			float: right;
+		}
+		.bottom{
+			width: 500px;
+			height: 200px;
+			background: deeppink;
+		}
+		/* .clearfix:after{
+			content:".";
+			display:block;
+			height: 0;
+			visibility: hidden;
+			clear: both;
+		
+		} */
+		.clearfix:before,.clearfix:after{
+			content:".";
+			display:table;
+			visibility: hidden;
+		}
+		.clearfix:after{
+			clear: both;
+		}
+		.clearfix{
+			*zoom:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="top clearfix">	
+		<img src="images/girl.gif" />
+	</div>
+
+	<div class="bottom  ">
+		这里是在下面的div,div不要被盖住啊啊啊
+	</div>
+</body>
+</html>
